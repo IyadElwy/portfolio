@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Iyad Elwy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Favicon -->
+    <link href="/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Jquery.terminal -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css" />
+
+    <style>
+        /* Ensure no white space or horizontal scrolling */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
+        }
+
+        /* Make terminal responsive */
+        #terminal_div,
+        #myTerminal {
+            width: 100%;
+            /* Set width to 100% of the container */
+            max-width: 100%;
+            /* Prevent overflowing the parent */
+            box-sizing: border-box;
+            /* Include padding and border in width calculation */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            #terminal_div {
+                display: none;
+                /* Hide the terminal on small screens */
+            }
+        }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#qualifications" class="nav-item nav-link">Qualifications</a>
+                <a href="#skills" class="nav-item nav-link">Skills</a>
+                <a href="#interestedInLearning" class="nav-item nav-link">Interested In Learning</a>
+                <a href="#portfolio" class="nav-item nav-link">Portfolio Projects</a>
+            </div>
+            <a href="https://www.linkedin.com/in/iyadelwy/"
+                class="mr-2 btn btn-outline-primary d-none d-lg-block">LinkedIn</a>
+            <a href="https://github.com/IyadElwy" class="btn btn-outline-primary d-none d-lg-block">GitHub</a>
+        </div>
+    </nav>
+
+    <!-- Navbar End -->
+
+
+
+    <div class="container-fluid bg-primary d-flex align-items-center mb-0 py-0" id="home" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row">
+                <!-- First Column (Existing content) -->
+                <div class="col-lg-6 text-center text-lg-left">
+                    <h3 class="text-white font-weight-normal mb-3">I'm</h3>
+                    <h1 class="display-3 text-uppercase text-primary mb-2"
+                        style="-webkit-text-stroke: 1px #ffffff; color: #000000; text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);">
+                        Iyad Elwy
+                    </h1>
+                    <h3 class="text-white font-weight-normal mb-3">I do</h3>
+                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <div class="typed-text d-none">Data Engineering, DevOps, Cloud, K8s and Containers, Infrastructure
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                    <a href="/assets/Resume_2025_en.pdf" class="btn btn-outline-light mr-3">Download CV
+                        (English)</a>
+                    <a href="/assets/Lebenslauf_2025_de.pdf" class="btn btn-outline-light mr-3">Download CV
+                        (German)</a>
+                </div>
+
+                <!-- New Column (Added content) -->
+                <div id="terminal_div" class="col-lg-6 text-center text-lg-left">
+                    <br>
+                    <div class="container">
+                        <div class="position-relative d-flex align-items-center justify-content-center">
+                            <div id="myTerminal" style="width: 1000px; height: 500px;"></div>
+                            <script src="js/customTerminal.js"></script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+
+            <div id="smallScreenMessage" class="text-center text-grey mt-3" style="display: none;">
+                <p>Open on PC to view the awesome integrated terminal feature running on a container orchestaror on my
+                    own 3-node home cluster :)</p>
+            </div>
+            <script>
+                // Function to check screen width and toggle terminal visibility
+                function toggleTerminalVisibility() {
+                    const terminalDiv = document.getElementById("terminal_div");
+
+                    if (window.innerWidth > 768) {
+                        terminalDiv.style.display = "block"; // Show terminal
+                        smallScreenMessage.style.display = "none"; // Show message
+                    } else {
+                        terminalDiv.style.display = "none"; // Hide terminal
+                        smallScreenMessage.style.display = "block"; // Show message
+                    }
+                }
+
+                // Run on initial load
+                toggleTerminalVisibility();
+
+                // Add event listener for screen resizing
+                window.addEventListener("resize", toggleTerminalVisibility);
+            </script>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Header End -->
+
+
+
+
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
+                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+            </div>
+            <!-- <div class="row align-items-center"> -->
+            <!-- <div class="col-lg-7"> -->
+            <h3 class="mb-4">I love working with Infrastructure...</h3>
+            <p>Recent graduate, eager to gain real-world experience and learn from all sorts of experiences. Enjoy
+                working on projects at the intersection of data engineering, DevOps, and infrastructure. Interests
+                include container orchestration, workflow automation, and building efficient, scalable systems.
+                Passionate about integrating technology into creative and impactful solutions.</p>
+            <div class="row mb-3">
+                <div class="col-sm-6 py-2">
+                    <h6>Name: <span class="text-secondary">Iyad Elwy</span></h6>
+                </div>
+                <div class="col-sm-6 py-2">
+                    <h6>Birthday: <span class="text-secondary">17. June 2001</span></h6>
+                </div>
+                <div class="col-sm-6 py-2">
+                    <h6>Degree: <span class="text-secondary">B.Sc. Computer Science</span></h6>
+                </div>
+                <div class="col-sm-6 py-2">
+                    <h6>Experience: <span class="text-secondary">1-2 Years</span></h6>
+                </div>
+                <div class="col-sm-6 py-2">
+                    <h6>Phone: <span class="text-secondary">+49 152-079-59219</span></h6>
+                </div>
+                <div class="col-sm-6 py-2">
+                    <h6>Email: <span class="text-secondary">elwyiyad@gmail.com</span></h6>
+                </div>
+                <div class="col-sm-6 py-2">
+                    <h6>Address: <span class="text-secondary">Baden-Württemberg, Germany</span></h6>
+                </div>
+                <div class="col-sm-6 py-2">
+                    <h6>Fluent Languages: <span class="text-secondary">German, English, Arabic</span></h6>
+                </div>
+            </div>
+            <h5 class="mb-4">By the way, all of this runs on my self-hosted 3-Node K8s Cluster</h5>
+
+            <a href="https://www.linkedin.com/in/iyadelwy/" class="btn btn-outline-primary mr-4">View my LinkedIn
+                Profile</a>
+            <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualifications">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Qualifications
+                </h1>
+                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+            </div>
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Education</h3>
+                    <div class="border-left border-primary pt-2 pl-4">
+                        <div class="position-relative mb-4">
+                            <h5 class="font-weight-bold mb-1">B.Sc. Computer Science</h5>
+                            <p class="mb-2"><strong>German International University</strong> | <small>2020 -
+                                    2024</small></p>
+                            <p>Graduated With Honers in Computer Science Major Data Science & Software Engineering </p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <h5 class="font-weight-bold mb-1">German International Abitur</h5>
+                            <p class="mb-2"><strong>Europa Schule Kairo</strong> | <small>2010 - 2019</small></p>
+                            <p>Obtained my German Abitur from Europa Schule Kairo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-6"> -->
+
+            <div class="row align-items-center">
+                <h3 class="mb-4">My Expericence</h3>
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <h5 class="font-weight-bold mb-1">Data Engineer</h5>
+                        <p class="mb-2"><strong>Bosch GmbH - Renningen, Germany</strong> | <small>Nov 2024 -
+                                Current Date</small>
+                        </p>
+                        <p>
+                            ● Manage and maintain Airflow deployments for data workflows. <br>
+                            ● Work with Kubernetes and Rancher to orchestrate containerized applications. <br>
+                            ● Handle video and metadata from vehicles, processing and analyzing large datasets. <br>
+                            ● Managed, renewed and evaluated TLS Certificates for deployments and services. <br>
+                            ● Configured "Big Data" workloads to run on the Spark Cluster Mode for quicker processing.
+                            <br>
+                        </p>
+                    </div>
+                    <div class="position-relative mb-4">
+                        <h5 class="font-weight-bold mb-1">Data Science Internship</h5>
+                        <p class="mb-2"><strong>Bosch GmbH - Bühl, Germany</strong> | <small>Feb 2024 - Jun
+                                2024</small></p>
+                        <p>
+                            ● Developed predictive Time-Series algorithms for an accelerated testing process to
+                            reduce Time to Market.<br>
+                            ● Utilized advanced techniques to extract and interpret machinery data, contributing to
+                            improved decision-making processes.<br>
+                            ● Conducted extensive research using academic databases to identify state-of-the-art
+                            methodologies, ensuring best practices in experiments.<br>
+                            ● Collaborated effectively with cross-functional teams to drive project success and
+                            achieve shared objectives.<br>
+                            ● Employed visualization and statistical analysis techniques to assess data integrity
+                            and derive actionable insights.<br>
+                            ● Implemented a variety of machine learning algorithms, including both traditional and
+                            deep learning models, to address complex challenges.<br>
+                            ● Leveraged Azure Cloud services, including Azure OpenAI, for model modification and
+                            testing, optimizing performance and scalability.<br>
+                            ● Identified and implemented appropriate data stores within Azure Cloud, streamlining
+                            data ingestion processes and enhancing accessibility.<br>
+                            ● Integrated Azure OpenAI with Microsoft Copilot to develop custom services, enhancing
+                            daily productivity and efficiency.<br>
+                            ● Leveraged Azure Cognitive Services for natural language processing tasks, enhancing
+                            data understanding and insights extraction.
+                        </p>
+                    </div>
+                    <div class="position-relative mb-4">
+                        <h5 class="font-weight-bold mb-1">Software Engineering Internship</h5>
+                        <p class="mb-2"><strong>Ackoo - Cairo, Egypt</strong> | <small>Jun 2023 - Sep 2023</small>
+                        </p>
+                        <p>● Designed and implemented effective database solutions and models to store and retrieve
+                            data.<br>
+                            ● Collaborated on ETL (Extract, Transform, Load) tasks, maintaining data integrity and
+                            verifying pipeline stability.<br>
+                            ● Created ETL pipelines for data extraction from various sources, including RESTful, and
+                            GraphQL APIs, optimizing data integration.<br>
+                            ● Achieved a 30% data increase by implementing cloud-based data architecture (AWS and
+                            Firebase), enhancing business value.<br>
+                            ● Implemented robust unit testing strategies, ensuring tool and pipeline reliability,
+                            with a focus on code coverage.<br>
+                            ● Conducted code reviews, enhancing codebase quality, and fostering teamwork.<br>
+                            ● Proficiently used Git and GitHub in an agile development environment.<br>
+                            ● Expanded data sources by 12%, enriching the organization's data ecosystem.<br>
+                            ● Implemented industry best practices in software engineering, adhering and leveraging
+                            advanced JavaScript techniques</p>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Qualification End -->
+
+
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="skills">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <!-- <i class="fa-brands fa-2x fa-linux service-icon bg-primary text-white mr-3"></i> -->
+                        <i class="fab fa-2x fa-linux service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">Linux</h4>
+                    </div>
+                    <p>I am proficient in navigating and managing Linux distributions, including starting,
+                        stopping, and debugging services, as well as reviewing logs for troubleshooting. I am
+                        comfortable with essential Linux commands and configurations. My personal PC runs Ubuntu which
+                        is part of the reason for my familiarity with the ecosystem and its usability.
+
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-git service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+
+                        <h4 class="font-weight-bold m-0">VC & GitOps</h4>
+                    </div>
+                    <p>I am experienced in version control using Git and applying GitOps principles for infrastructure
+                        automation. I can manage repositories and streamline deployments.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-github service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+
+                        <h4 class="font-weight-bold m-0">CI/CD</h4>
+                    </div>
+                    <p>I have implemented and managed CI/CD pipelines, automating build, test, and deployment processes.
+                        My experience includes tools like Jenkins, GitHub Actions, and GitLab CI, ensuring faster and
+                        more reliable software delivery cycles.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-python service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">Python</h4>
+                    </div>
+                    <p>I am skilled in Python, using it to create scripts, Airflow DAGs, and full-fledged software
+                        applications. I have extensive experience with Python in data science, leveraging libraries for
+                        machine learning, deep learning, data visualization, data exploration, and data processing. My
+                        expertise extends to creating robust and scalable solutions.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-database service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">SQL</h4>
+                    </div>
+                    <p>I am proficient in writing complex SQL queries for data extraction, transformation, and
+                        reporting. I have experience with database optimization techniques, such as indexing and query
+                        tuning, ensuring efficient data retrieval and manipulation.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-docker service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">Containerization</h4>
+                    </div>
+                    <p>I have expertise in containerization technologies like Docker and Kubernetes, building and
+                        managing containerized applications for development and production environments. My skills
+                        include creating Dockerfiles, orchestrating services (also using Rancher GUI), and optimizing
+                        container performance.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-file-code service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">Data Engineering</h4>
+                    </div>
+                    <p>I have extensive experience with Airflow for workflow automation and data pipeline orchestration.
+                        My knowledge includes database modeling, normalization (normal forms), query optimization using
+                        pgAdmin and indexes, and data modeling for data warehousing to support analytics.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-code service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">Software Lifecycle</h4>
+                    </div>
+                    <p>I understand the software development lifecycle, from requirement gathering to deployment and
+                        maintenance. My expertise includes agile methodologies, code reviews, and adhering
+                        to best practices for clean, maintainable code.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="interestedInLearning">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Interested
+                </h1>
+                <h1 class="position-absolute text-uppercase text-primary">Interested in Learning</h1>
+            </div>
+            <div class="row pb-3">
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-cloud service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">Cloud & IAC
+                        </h4>
+                    </div>
+                    <p>
+                        Understanding cloud platforms would help me manage resources
+                        more effectively and ensure that my solutions can scale efficiently.
+                        Learning IAC like Terraform is important because it would allow me to automate infrastructure
+                        provisioning, manage resources consistently, and reduce human error. With IAC, I could ensure
+                        that the infrastructure is reproducible and version-controlled, which is essential for DevOps
+                        practices.
+                    </p>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-binoculars service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">Monitoring and Logging</h4>
+                    </div>
+                    <p>Monitoring and logging tools like Prometheus are crucial for identifying and resolving issues in
+                        the infrastructure and applications. Understanding these tools would help me maintain system
+                        reliability, track performance, and quickly troubleshoot any issues that arise.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-octopus-deploy service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">K8s Mastery</h4>
+                    </div>
+                    <p>While I'm familiar with using Kubernetes through GUIs like Rancher or by editing yaml mastering
+                        Kubernetes and its ecosystem (including tools like Helm) would allow me to manage complex
+                        containerized applications more effectively. This knowledge would make me proficient in scaling,
+                        monitoring, and troubleshooting Kubernetes clusters.
+
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-server service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">Systems Design & Architecture</h4>
+                    </div>
+                    <p>Mastering systems design and architecture is essential for building scalable, high-performance,
+                        and fault-tolerant systems. Understanding these principles would help me design robust systems
+                        that can handle real-world challenges in terms of load, reliability, and maintainability.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-sitemap service-icon bg-primary text-white mr-3"
+                            style="border-radius: 10%; padding: 10px;"></i>
+                        <h4 class="font-weight-bold m-0">Networing Services</h4>
+                    </div>
+                    <p>Learning networking services like Nginx is vital for configuring and managing web traffic, load
+                        balancing, and reverse proxies. This would play a key role in optimizing application performance
+                        and ensuring the security and scalability of web-based services.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+
+
+    <!-- Portfolio Start -->
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Projects</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <ul class="list-inline mb-4" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".dataEngineering">Data Engineering
+                        </li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".infrastructure">Infrastructure</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".cloud">Cloud</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".devops">DevOps</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".python">Python</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container">
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure cloud python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a href="https://github.com/IyadElwy/Televisions">
+                            <img class="img-fluid rounded w-100" src="img/televisions.jpg" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Televisions Pipeline Project</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S1877050924029922">
+                            <img class="img-fluid rounded w-100" src="img/takween.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">"Takween" Data Annotation Platform with
+                                Preprocessing & Multi-User-Collaboration (Published
+                                Paper)</h5>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a href="https://github.com/IyadElwy/apps/blob/deploy_with_swarm/portfolio/README.md">
+                            <img class="img-fluid rounded w-100" src="img/portfolio.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Interactive Portfolio Website with built-in
+                                Live Terminal On Self-Hosted K8s</h5>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/iyadelwy/"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://github.com/IyadElwy"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">portfolio.iyadelwy.xyz</a>. All Rights
+                Reserved.
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/customTerminal.js"></script>
+
+</body>
+
+</html>

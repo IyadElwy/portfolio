@@ -1,0 +1,17 @@
+vm-container
+.git
+.gitignore
+Dockerfile
+docker-compose.yaml
+
+# Ignore bytecode and cache files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore unnecessary logs and temp files
+*.log
+*.tmp
+*.bak
+*.swp
