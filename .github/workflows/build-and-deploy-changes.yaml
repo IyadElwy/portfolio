@@ -51,6 +51,7 @@ jobs:
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           authKey: ${{ secrets.TS_AUTH_KEY }}
           tags: tag:k8s-operator
+          statedir: /tmp/tailscale-state
       - name: Restart deployments
         uses: actions-hub/kubectl@master
         env:
