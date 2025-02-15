@@ -51,10 +51,7 @@ jobs:
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:k8s-operator
       - name: Set Kubernetes Context Manually
-        run: |
-          export KUBE_IP="100.76.13.101"
-          echo "KUBE_IP=$KUBE_IP" >> $GITHUB_ENV
-          echo "KUBE_HOST=https://$KUBE_IP:443" >> $GITHUB_ENV
+        run: echo "100.76.13.101 tailscale-operator-1.tail81b504.ts.net" | sudo tee -a /etc/hosts
       # - name: test
       #   run: ping server0 -w 10 && ping server1 -w 10 && ping server3 -w 10 && ping tailscale-operator-1 -w 10
       - name: Restart deployments
