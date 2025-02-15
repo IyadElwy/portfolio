@@ -49,7 +49,7 @@ jobs:
         with:
           oauth-client-id: kEAgxRCeM711CNTRL
           oauth-secret: tskey-client-kEAgxRCeM711CNTRL-rtCEDLaLxDhuf4HnQ8EDDhB8HMMY6AdWd
-          tags: [tag:k8s-operator, tag:k8s-readers]
+          tags: tag:k8s-operator
       - name: Restart deployments
         uses: actions-hub/kubectl@master
         env:
