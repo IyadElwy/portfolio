@@ -50,10 +50,6 @@ jobs:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:k8s-operator
-      - name: Set Kubernetes Context Manually
-        run: echo "100.76.13.101 tailscale-operator-1.tail81b504.ts.net" | sudo tee -a /etc/hosts
-      # - name: test
-      #   run: ping server0 -w 10 && ping server1 -w 10 && ping server3 -w 10 && ping tailscale-operator-1 -w 10
       - name: Restart deployments
         uses: actions-hub/kubectl@master
         env:
