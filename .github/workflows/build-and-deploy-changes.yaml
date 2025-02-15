@@ -47,8 +47,8 @@ jobs:
       - name: Connect to tailscale network
         uses: tailscale/github-action@v3
         with:
-          oauth-client-id: kEAgxRCeM711CNTRL
-          oauth-secret: tskey-client-kEAgxRCeM711CNTRL-rtCEDLaLxDhuf4HnQ8EDDhB8HMMY6AdWd
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:k8s-operator
       - name: Restart deployments
         uses: actions-hub/kubectl@master
