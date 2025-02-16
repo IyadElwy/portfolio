@@ -92,9 +92,6 @@ def init_dag(movie: Movie, request: Request):
     logger.info(
         f"{request.client.host} | {request.state.unique_request_id}: movie request -> {movie.title}"
     )
-    print("===================================")
-    print(dict(os.environ))
-    print("===================================")
     cache_result = cache.get(movie.title)
     if cache_result:
         logger.info(
