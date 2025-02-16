@@ -21,7 +21,7 @@ jobs:
         with:
           push: true
           tags: iyadelwy/portfolio-api-image:latest
-          secret-envs: |
+          build-args: |
             AIRFLOW_USER=${{ secrets.AIRFLOW_USER }}
             AIRFLOW_PASSWORD=${{ secrets.AIRFLOW_PASSWORD }}
 

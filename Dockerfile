@@ -1,5 +1,12 @@
 FROM python:3.12-bookworm
 
+
+ARG AIRFLOW_USER
+ENV AIRFLOW_USER ${AIRFLOW_USER}
+
+ARG AIRFLOW_PASSWORD
+ENV AIRFLOW_PASSWORD ${AIRFLOW_PASSWORD}
+
 RUN ["pip", "install", "fastapi[standard]", "requests", "cachetools", "python-dotenv", "loki-logger-handler"]
 
 WORKDIR /app
