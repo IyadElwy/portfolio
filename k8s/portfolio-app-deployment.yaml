@@ -184,15 +184,3 @@ roleRef:
   kind: Role
   name: airflow-worker-pod-access
   apiGroup: rbac.authorization.k8s.io
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: movie-processing-temp-pvc
-spec:
-  resources:
-    requests:
-      storage: 100Mi
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: "longhorn"
