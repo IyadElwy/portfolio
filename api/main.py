@@ -4,14 +4,15 @@ import uuid
 
 import requests
 from cachetools import TTLCache
-from dotenv import dotenv_values
+from dotenv import dotenv_values, 
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from loki_logger_handler.loki_logger_handler import LokiLoggerHandler
 from pydantic import BaseModel
 from requests.auth import HTTPBasicAuth
+import os
 
-config = dotenv_values(".env")
+config = dict(os.environ)
 
 
 logger = logging.getLogger("web-api-logger")
