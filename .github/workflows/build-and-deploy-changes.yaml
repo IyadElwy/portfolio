@@ -18,12 +18,12 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v6
-        secrets: |
-          AIRFLOW_USER=${{ secrets.AIRFLOW_USER }}
-          AIRFLOW_PASSWORD=${{ secrets.AIRFLOW_PASSWORD }}
         with:
           push: true
           tags: iyadelwy/portfolio-api-image:latest
+          secret-envs: |
+            AIRFLOW_USER=${{ secrets.AIRFLOW_USER }}
+            AIRFLOW_PASSWORD=${{ secrets.AIRFLOW_PASSWORD }}
 
   build-push-vm:
     name: Build and Push Docker Image for VM
