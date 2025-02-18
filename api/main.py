@@ -47,7 +47,10 @@ async def log_requests(request: Request, call_next):
         body = body.decode("utf-8") if body else "empty"
     except Exception:
         body = "Body could not be parsed"
-
+    print("=================================")
+    print(request.headers)
+    print(request.client)
+    print("=================================")
     log_string = f"{request.client.host} | {unique_request_id}: {method} | {path} {query_params} - IN PROGRESS | Body: {body}"
     logger.info(log_string)
     request.state.unique_request_id = unique_request_id
