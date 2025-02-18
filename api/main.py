@@ -47,11 +47,7 @@ async def log_requests(request: Request, call_next):
         body = body.decode("utf-8") if body else "empty"
     except Exception:
         body = "Body could not be parsed"
-    print("=================================")
-    print(request.headers)
-    print(request.client)
-    print("=================================")
-    log_string = f"{request.client.host} | {unique_request_id}: {method} | {path} {query_params} - IN PROGRESS | Body: {body}"
+    log_string = f"{request.headers.get('X-Real-IP') or request.client.host} | {unique_request_id}: {method} | {path} {query_params} - IN PROGRESS | Body: {body}"
     logger.info(log_string)
     request.state.unique_request_id = unique_request_id
 
@@ -59,7 +55,7 @@ async def log_requests(request: Request, call_next):
 
     response_time = time.time() - start_time
     status_code = response.status_code
-    log_string = f"{request.client.host} | {unique_request_id}: {method} | {path} {query_params} - {status_code} | Body: {body} | Response Time: {response_time:.2f}s"
+    log_string = f"{request.headers.get('X-Real-IP') or request.client.host} | {unique_request_id}: {method} | {path} {query_params} - {status_code} | Body: {body} | Response Time: {response_time:.2f}s"
     logger.info(log_string)
 
     return response
@@ -68,7 +64,7 @@ async def log_requests(request: Request, call_next):
 @app.post("/cmd")
 def cmd(command_body: CommandBody, request: Request):
     logger.info(
-        f"{request.client.host} | {request.state.unique_request_id}: command {command_body.command}"
+        f"{request.headers.get('X-Real-IP') or request.client.host} | {request.state.unique_request_id}: command {command_body.command}"
     )
     res = requests.post(
         "http://portfolio-vm:5003/cmd",
@@ -79,13 +75,13 @@ def cmd(command_body: CommandBody, request: Request):
         res.raise_for_status()
     except Exception as e:
         logger.critical(
-            f"{request.client.host} | {request.state.unique_request_id}: Error: {e}",
+            f"{request.headers.get('X-Real-IP') or request.client.host} | {request.state.unique_request_id}: Error: {e}",
             exc_info=True,
         )
 
     command_result = res.json()
     logger.info(
-        f"{request.client.host} | {request.state.unique_request_id}: command={command_body.command} | {command_result=}"
+        f"{request.headers.get('X-Real-IP') or request.client.host} | {request.state.unique_request_id}: command={command_body.command} | {command_result=}"
     )
     return command_result
 
@@ -93,7 +89,7 @@ def cmd(command_body: CommandBody, request: Request):
 @app.post("/initdag")
 def init_dag(movie: Movie, request: Request):
     logger.info(
-        f"{request.client.host} | {request.state.unique_request_id}: movie request -> {movie.title}"
+        f"{request.headers.get('X-Real-IP') or request.client.host} | {request.state.unique_request_id}: movie request -> {movie.title}"
     )
     cache_result = cache.get(movie.title)
     if cache_result:
@@ -102,7 +98,7 @@ def init_dag(movie: Movie, request: Request):
         )
         return {"result": "movie request is already being processed"}
     logger.info(
-        f"{request.client.host} | {request.state.unique_request_id}: cache miss for -> {movie.title}"
+        f"{request.headers.get('X-Real-IP') or request.client.host} | {request.state.unique_request_id}: cache miss for -> {movie.title}"
     )
     cache[movie.title] = "processing"
     res = requests.post(
@@ -115,7 +111,7 @@ def init_dag(movie: Movie, request: Request):
         res.raise_for_status()
     except Exception as e:
         logger.critical(
-            f"{request.client.host} | {request.state.unique_request_id}: Error: {e}",
+            f"{request.headers.get('X-Real-IP') or request.client.host} | {request.state.unique_request_id}: Error: {e}",
             exc_info=True,
         )
 
