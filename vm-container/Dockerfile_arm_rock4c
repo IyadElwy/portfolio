@@ -37,4 +37,7 @@ RUN ["chmod", "555", "/home/narrator/.bashrc"]
 RUN ["chmod", "555", "/home/narrator/.profile"]
 
 USER narrator:narrator
+
+COPY ./CheckMeOut /home/narrator/CheckMeOut
+
 WORKDIR /home/narrator

@@ -79,7 +79,7 @@ spec:
     spec:
       containers:
         - name: portfolio-vm
-          image: iyadelwy/portfolio-vm-image:arm64-latest
+          image: iyadelwy/portfolio-vm-image:arm64-v2
           imagePullPolicy: Always
           resources:
             limits:

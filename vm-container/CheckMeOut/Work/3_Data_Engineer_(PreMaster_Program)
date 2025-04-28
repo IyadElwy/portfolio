@@ -1,0 +1,16 @@
+Data Engineer (PreMaster Program)
+Bosch GmbH - Renningen, Germany | Nov 2024 - Current Date
+
+● Part of the Data and Tooling team for the Interior Sensing Solutions (ISS) project at Bosch
+● Managing the lifecycle of Airflow deployments for data workflows
+● Working with Kubernetes and Rancher to deploy containerized applications
+● Supporting multinational teams with debugging Kubernetes deployments and resources
+● Responsible for migrating Kubernetes resources between clusters with different versions
+● Managing, renewing, and evaluating TLS certificates for deployments and services
+● Introducing and configuring Spark cluster mode for fast and efficient data processing and KPI calculations
+● Deploying Databricks Unity Catalog on our on-premises Kubernetes cluster and migrating all tables to the catalog for centralized, governance-compliant data management and access control
+● Creating and expanding Helm charts for services and tools
+● Writing and debugging Python scripts to extract, process, and load data into our data lake or data warehouse
+● Using Azure Cloud as an external identity provider for our RBAC-based tools
+● Actively evaluating new methods, tools, and ideas to improve our data infrastructure and developer experience
+
