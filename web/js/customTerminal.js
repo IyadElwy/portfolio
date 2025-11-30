@@ -7,7 +7,7 @@
             term.clear();
         } else if (command !== '') {
             term.pause();
-            fetch('https://portfolio.iyadelwy.xyz/cmd', {
+            fetch('https://portfolio.iyadelwy.de/cmd', {
                 method: 'POST',
                 body: JSON.stringify({ command: command }),
                 headers: {
