@@ -7,7 +7,7 @@
             term.clear();
         } else if (command !== '') {
             term.pause();
-            fetch('https://portfolio.iyadelwy.xyz/cmd', {
+            fetch('https://portfolio.iyadelwy.de/cmd', {
                 method: 'POST',
                 body: JSON.stringify({ command: command }),
                 headers: {
@@ -26,13 +26,16 @@
         }
     }, {
         greetings: `
-    ▗▖   ▄ ▄   ▄ ▗▞▀▚▖    ▗▖ ▗▖▄▄▄▄  ▄▄▄     ▗▄▄▖  ▄▄▄     ▐▌
-    ▐▌   ▄ █   █ ▐▛▀▀▘    ▐▌▗▞▘█  █ ▀▄▄      ▐▌ ▐▌█   █    ▐▌
-    ▐▌   █  ▀▄▀  ▝▚▄▄▖    ▐▛▚▖ █▀▀█ ▄▄▄▀     ▐▛▀▘ ▀▄▄▄▀ ▗▞▀▜▌
-    ▐▙▄▄▖█                ▐▌ ▐▌█▄▄█          ▐▌         ▝▚▄▟▌
-                                                                 
-                                                                                                                           
-You are currently in a Live Terminal Session running in multiple K8s Pods.\n\nThis environment was carefully designed to ensure robustness and security by running it on my own self-hosted Kubernetes Multi-Node cluster, running in my kitchen :)\n\nTo know more about how this environment was built check out the "Portfolio Projects" section bellow to access the project\'s GitHub.\n\nI also wrote a small Movie data CLI Tool and installed it into the pod so you don't get bored here.\nTo get started type "movies --help"\n\nTry looking around with ls\n\nP.S. Don't worry about breaking anything...Thanks to K8s, you can't.\n\n\n`,
+ ___      ___   __   __  _______    ___   _   _____   _______    _______  _______  ______  
+|   |    |   | |  | |  ||       |  |   | | | |  _  | |       |  |       ||       ||      | 
+|   |    |   | |  |_|  ||    ___|  |   |_| | | |_| | |  _____|  |    _  ||   _   ||  _    |
+|   |    |   | |       ||   |___   |      _||   _   || |_____   |   |_| ||  | |  || | |   |
+|   |___ |   | |       ||    ___|  |     |_ |  | |  ||_____  |  |    ___||  |_|  || |_|   |
+|       ||   |  |     | |   |___   |    _  ||  |_|  | _____| |  |   |    |       ||       |
+|_______||___|   |___|  |_______|  |___| |_||_______||_______|  |___|    |_______||______| 
+
+
+You are currently in a Live Terminal Session running in multiple K8s Pods.\n\nThis environment was carefully designed to ensure robustness and security by running it on my own self-hosted Kubernetes Multi-Node cluster, running in my kitchen :)\n\nTo know more about how this environment was built check out the "Portfolio Projects" section bellow to access the project\'s GitHub.\n\nTry looking around with ls\n\nP.S. Don't worry about breaking anything...Thanks to K8s, you can't.\n\n\n`,
         prompt: '> '
     });
 
