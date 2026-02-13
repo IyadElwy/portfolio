@@ -1,0 +1,118 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-api
+  labels:
+    app: portfolio-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portfolio-api
+  template:
+    metadata:
+      labels:
+        app: portfolio-api
+    spec:
+      containers:
+        - name: portfolio-api
+          image: iyadelwy/portfolio-api-image:arm64-latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5003
+          resources:
+            limits:
+              memory: "100Mi"
+              cpu: "0.50"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5003
+            initialDelaySeconds: 2
+            periodSeconds: 5
+            timeoutSeconds: 20
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5003
+            initialDelaySeconds: 5
+            periodSeconds: 60
+            timeoutSeconds: 20
+            failureThreshold: 1
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: portfolio-api
+  labels:
+    app: portfolio-api
+spec:
+  type: NodePort
+  ports:
+    - port: 5003
+      targetPort: 5003
+      nodePort: 30503
+      protocol: TCP
+  selector:
+    app: portfolio-api
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-vm
+  labels:
+    app: portfolio-vm
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: portfolio-vm
+  template:
+    metadata:
+      labels:
+        app: portfolio-vm
+    spec:
+      containers:
+        - name: portfolio-vm
+          image: iyadelwy/portfolio-vm-image:arm64-latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5003
+          resources:
+            limits:
+              memory: "100Mi"
+              cpu: "0.50"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5003
+            initialDelaySeconds: 2
+            periodSeconds: 5
+            timeoutSeconds: 20
+            failureThreshold: 1
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5003
+            initialDelaySeconds: 5
+            periodSeconds: 60
+            timeoutSeconds: 20
+            failureThreshold: 1
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: portfolio-vm
+  labels:
+    app: portfolio-vm
+spec:
+  type: NodePort
+  ports:
+    - port: 5003
+      targetPort: 5003
+      nodePort: 30504
+      protocol: TCP
+  selector:
+    app: portfolio-vm
