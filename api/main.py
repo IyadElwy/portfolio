@@ -120,16 +120,18 @@ def init_dag(movie: Movie, request: Request):
 
 @app.get("/health")
 def health():
-    res = requests.post(
-        "http://portfolio-vm:5003/cmd",
-        json={"command": "ls"},
-        headers={"Content-type": "application/json"},
-    )
-    res.raise_for_status()
-
-    command_result = res.json()
-
-    return command_result
+    try:
+        res = requests.post(
+            "http://portfolio-vm:5003/cmd",
+            json={"command": "ls"},
+            headers={"Content-type": "application/json"},
+            timeout=5,
+        )
+        res.raise_for_status()
+        return {"status": "ok", "vm": res.json()}
+    except Exception as e:
+        logger.warning(f"portfolio-vm unreachable during health check: {e}")
+        return {"status": "degraded", "vm": "unreachable"}
 
 
 app.mount("/", StaticFiles(directory="../web", html=True), name="static")
