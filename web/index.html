@@ -56,6 +56,13 @@
                 /* Hide the terminal on small screens */
             }
         }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background: #fff;
+        }
     </style>
 
 </head>
@@ -277,8 +284,6 @@
                             microservices architectures<br>
                             ● Built production backend services using Python/FastAPI with PostgreSQL, Redis, and
                             RabbitMQ for data processing and workflow orchestration<br>
-                            ● Designed and developed Dave (data acquisition and persistence service hub), Lara (book
-                            review system), and Fine (invoice payment automation)<br>
                             ● Integrated enterprise systems including Oxaion ERP and Elasticsearch for automated data
                             flows and business process automation<br>
                             ● Leveraged AI-assisted development using Claude with advanced prompting techniques
@@ -301,6 +306,19 @@
                             requirements gathering to production deployment<br>
                             ● Implemented cost-effective infrastructure solutions, optimizing spending through strategic
                             technology evaluation and selection<br>
+                            ● Led end-to-end technical conception, implementation, and integration of multiple AI
+                            projects — from requirements analysis and data preparation through LLM integration to
+                            production deployment:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;◦ <strong>Project KATA:</strong> Agentic AI pipeline using LLM
+                            (AWS Bedrock) to process raw data from multiple sources in parallel and generate structured
+                            outputs<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;◦ <strong>Project EIKE:</strong> GenAI service that automatically
+                            extracts order data from email attachments and routes it to internal systems<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;◦ <strong>Project LARA:</strong> Full-stack editorial platform
+                            (FastAPI + Next.js) with Elasticsearch integration and multi-stage review workflow<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;◦ <strong>Project DAVE:</strong> Internal service hub connecting
+                            heterogeneous enterprise systems (ERP, PIM, financial data) through a unified API
+                            layer<br>
                         </p>
                     </div>
                     <div class="position-relative mb-4">
@@ -619,6 +637,338 @@
                     </div>
                 </div>
 
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://www.medizin.uni-tuebingen.de/de/das-klinikum/einrichtungen/kliniken/anaesthesie/katastrophenmedizin">
+                            <img class="img-fluid rounded w-100" src="img/katapp.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">KatApp: Mobile Katastrophenschutz-App für
+                                Einsatzkräfte und Einsatzleitung</h5>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- FinanzWerk Projects -->
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-infra/blob/main/docs/project-01-local-platform.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p01.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Local Kubernetes Platform with Terraform,
+                                PostgreSQL & Vault</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-warehouse/blob/main/docs/project-02-compliance-queries.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p02.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">DORA/NIS2 Compliance Queries on Simulated
+                                Financial Incident Data</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-warehouse/blob/main/docs/project-03-window-functions.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p03.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Window Functions, CTEs & Materialized Views for
+                                Quarterly Reporting</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-warehouse/blob/main/docs/project-04-star-schema-scd.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p04.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Star Schema, Data Vault & Slowly Changing
+                                Dimensions in PostgreSQL</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-airflow/blob/main/docs/project-06-batch-ingestion.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p06.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Batch Ingestion Pipeline with Pydantic
+                                Validation & Quarantine Layer</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-airflow/blob/main/docs/project-07-incremental.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p07.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Incremental Loads, Great Expectations & Anomaly
+                                Detection</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-airflow/blob/main/docs/project-08-airflow-dags.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p08.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Airflow DAGs with KubernetesExecutor, Sensors &
+                                XComs</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-dbt/blob/main/docs/project-11-dbt-setup.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p11.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">dbt Staging, Intermediate & Mart Models on the
+                                Compliance Warehouse</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-dbt/blob/main/docs/project-12-airflow-dbt.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p12.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">dbt Snapshots for SCD Type 2, Macros &
+                                dbt-utils</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-airflow/blob/main/docs/project-13-compliance-pipeline.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p13.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Full ELT Pipeline Orchestrated with Airflow and
+                                dbt</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-dbt/blob/main/docs/project-14-data-contracts.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p14.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Data Contracts, dbt Generic Tests & Schema
+                                Enforcement</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-lakehouse/blob/main/docs/project-15-delta-lake.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p15.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Delta Lake Bronze/Silver/Gold Medallion
+                                Architecture on MinIO</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-lakehouse/blob/main/docs/project-16-nessie-iceberg.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p16.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Nessie Catalog & Apache Iceberg with Table
+                                Branching & Time Travel</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-airflow/blob/main/docs/project-17-trino.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p17.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Advanced Airflow — Dynamic Task Mapping, Pools
+                                & Trino Queries</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-streaming/blob/main/docs/project-19-redpanda.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p19.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Redpanda Kafka-Compatible Streaming Cluster on
+                                Kubernetes</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-streaming/blob/main/docs/project-20-classification.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p20.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Real-Time Incident Classification & Sub-200ms
+                                Alert Notifications</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-streaming/blob/main/docs/project-21-cdc.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p21.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Change Data Capture from PostgreSQL WAL via
+                                Debezium</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-streaming/blob/main/docs/project-22-pyspark.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p22.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">PySpark Backfill & Vendor Concentration Risk
+                                with HHI</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-airflow/blob/main/docs/project-23-spark-integration.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p23.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Spark on Kubernetes Operator Triggered from
+                                Airflow</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-warehouse/blob/main/docs/project-24-clickhouse.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p24.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">ClickHouse OLAP for High-Speed Compliance
+                                Aggregations</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-airflow/blob/main/docs/project-25-mlflow.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p25.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">MLflow Vendor Risk Model Training with Weekly
+                                Airflow Retraining</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-dagster/blob/main/docs/project-26-dagster-assets.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p26.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Dagster Asset Graph from Raw Ingestion to
+                                Reporting</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item infrastructure devops">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-dagster/blob/main/docs/project-27-keycloak.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p27.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Keycloak IAM with OPA Rego Authorization
+                                Policies</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering infrastructure">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-dagster/blob/main/docs/project-28-datahub.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p28.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">DataHub Data Catalog with Lineage from Airflow,
+                                dbt & Spark</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-dagster/blob/main/docs/project-29-openlineage.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p29.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">OpenLineage Tracking & YAML Data Contracts with
+                                Dagster Checks</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-dagster/blob/main/docs/project-30-data-products.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p30.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">DORA Data Products Published to DataHub with
+                                Governance Policies</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-ai/blob/main/docs/project-32-pgvector.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p32.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">pgvector Hybrid Semantic Search over Regulatory
+                                Docs & Incidents</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item dataEngineering python">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-ai/blob/main/docs/project-33-rag-pipeline.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p33.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">RAG Pipeline for Compliance Q&A Grounded in
+                                Incident History</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item devops cloud">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <a
+                            href="https://github.com/FinanzWerk-GmbH/finanzwerk-infra/blob/main/docs/project-34-azure-devops.md">
+                            <img class="img-fluid rounded w-100" src="img/finanzwerk-p34.png" alt="">
+                            <h5 class="portfolio-title text-center mt-2">Azure DevOps CI/CD for dbt, Airflow &
+                                Infrastructure Pipelines</h5>
+                        </a>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -640,8 +990,11 @@
                 <!-- Book Card — duplicate this block for each new book -->
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://images2.medimops.eu/product/fa8e63/M0B091WF6YKV-440px.webp" alt="The Kubernetes Book" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://images2.medimops.eu/product/fa8e63/M0B091WF6YKV-440px.webp"
+                                alt="The Kubernetes Book"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">The Kubernetes Book</h6>
@@ -652,8 +1005,10 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://m.media-amazon.com/images/I/71Bkk+WVLsL._SY522_.jpg" alt="Docker Deep Dive" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://m.media-amazon.com/images/I/71Bkk+WVLsL._SY522_.jpg"
+                                alt="Docker Deep Dive" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">Docker Deep Dive</h6>
@@ -664,8 +1019,10 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1546333824i/43429043.jpg" alt="Let's Go" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1546333824i/43429043.jpg"
+                                alt="Let's Go" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">Let's Go</h6>
@@ -676,8 +1033,10 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPiPUU6X1AplY5z3BAvTx79yvw9OMCCfi2sA29MPu7IQ&s=10" alt="Let's Go Further" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPiPUU6X1AplY5z3BAvTx79yvw9OMCCfi2sA29MPu7IQ&s=10"
+                                alt="Let's Go Further" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">Let's Go Further</h6>
@@ -688,8 +1047,11 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://images2.medimops.eu/product/d3026e/M01593276036-440px.webp" alt="Python Crash Course" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://images2.medimops.eu/product/d3026e/M01593276036-440px.webp"
+                                alt="Python Crash Course"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">Python Crash Course</h6>
@@ -700,8 +1062,11 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://d32vymxhv9fq6b.cloudfront.net/images/books/large/97805/9780596517748.jpg" alt="JavaScript: The Good Parts" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://d32vymxhv9fq6b.cloudfront.net/images/books/large/97805/9780596517748.jpg"
+                                alt="JavaScript: The Good Parts"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">JavaScript: The Good Parts</h6>
@@ -712,8 +1077,11 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://m.media-amazon.com/images/I/81+oMD7Lm7L._SY522_.jpg" alt="Fundamentals of Data Engineering" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://m.media-amazon.com/images/I/81+oMD7Lm7L._SY522_.jpg"
+                                alt="Fundamentals of Data Engineering"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">Fundamentals of Data Engineering</h6>
@@ -724,8 +1092,11 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://m.media-amazon.com/images/I/91YfNb49PLL._SY522_.jpg" alt="Designing Data-Intensive Applications" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://m.media-amazon.com/images/I/91YfNb49PLL._SY522_.jpg"
+                                alt="Designing Data-Intensive Applications"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">Designing Data-Intensive Applications</h6>
@@ -736,8 +1107,11 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://m.media-amazon.com/images/I/712NB2pnF4L._SY466_.jpg" alt="Data Engineering with Python" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://m.media-amazon.com/images/I/712NB2pnF4L._SY466_.jpg"
+                                alt="Data Engineering with Python"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">Data Engineering with Python</h6>
@@ -748,8 +1122,11 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://d32vymxhv9fq6b.cloudfront.net/images/books/large/97986/9798664653403.jpg" alt="System Design Interview Vol 1" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://d32vymxhv9fq6b.cloudfront.net/images/books/large/97986/9798664653403.jpg"
+                                alt="System Design Interview Vol 1"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">System Design Interview</h6>
@@ -760,8 +1137,11 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://m.media-amazon.com/images/I/51lJolln98L._SY522_.jpg" alt="System Design Interview Vol 2" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://m.media-amazon.com/images/I/51lJolln98L._SY522_.jpg"
+                                alt="System Design Interview Vol 2"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">System Design Interview Vol. 2</h6>
@@ -772,8 +1152,11 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://www.worldofbooks.com/cdn/shop/files/1617296902.jpg?v=1750992416&width=493" alt="Data Pipelines with Apache Airflow" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://www.worldofbooks.com/cdn/shop/files/1617296902.jpg?v=1750992416&width=493"
+                                alt="Data Pipelines with Apache Airflow"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">Data Pipelines with Apache Airflow</h6>
@@ -784,8 +1167,11 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
-                            <img src="https://www.worldofbooks.com/cdn/shop/files/1934356921.jpg?v=1750770374&width=493" alt="Seven Databases in Seven Weeks" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <div
+                            style="height: 220px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                            <img src="https://www.worldofbooks.com/cdn/shop/files/1934356921.jpg?v=1750770374&width=493"
+                                alt="Seven Databases in Seven Weeks"
+                                style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold mb-1">Seven Databases in Seven Weeks</h6>
